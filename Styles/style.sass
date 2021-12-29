@@ -1,0 +1,812 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap')
+
+$white: rgb(239, 241, 243)
+$background: rgb(219, 211, 216)
+$color1: rgb(216, 180, 160)
+$color2: rgb(215, 122, 97)
+$headings: rgb(34, 56, 67)
+$background-2: #a3c7b5fd
+
+$padding: 2rem
+
+*, *::before, *::after
+    box-sizing: inherit
+
+// .backdrop
+//     width: 100%
+//     height: 100vh
+//     background: black
+//     z-index: 1000
+//     position: absolute
+//     top: 0
+//     right: 0
+
+body
+    font-family: 'Roboto', sans-serif
+    font-size: 100%
+    box-sizing: border-box
+    margin: 0 0
+    padding: 0
+    min-height: 100vh
+    background: $white
+    overflow-x: hidden
+    // scroll-behavior: smooth
+    // height: 4000px
+    .up
+        position: fixed
+        right: 2rem
+        bottom: 2rem
+        display: flex
+        z-index: 20121
+        background: black
+        color: $white
+        text-decoration: none
+        width: 3.5rem
+        height: 3.5rem
+        border-radius: 50%
+        cursor: pointer
+        &:active
+            transform: scale(.95)
+        .up-content
+            margin: auto
+            // font-weight: 600
+            color: $white
+            text-decoration: none
+            font-size: 1.5rem
+            transform: rotate(-90deg)
+
+nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    padding: 0 1rem
+    background: $background-2
+    h1
+        font-size: 2rem
+        margin: 1rem 0
+        color: darken($headings, 10%)
+    .fa-arrow-down
+        font-size: 1.5rem
+        transform: rotate(90deg)
+        transition: transform 200ms linear
+        cursor: pointer
+        &:active
+            transform: scale(1.3)
+    ol
+        font-size: 1.3rem
+        position: absolute
+        right: -400px
+        top: 49px
+        width: 20rem
+        background: darken($background, 20%)
+        border-top-left-radius: 1rem
+        border-bottom-left-radius: 1rem
+        transition: right 400ms ease-out
+        li
+            padding: .5rem
+            width: 100%
+            border-bottom: 1px solid darken($background, 30%)
+            a
+                text-decoration: none
+                max-height: 50px
+                color: black
+                font-weight: 500
+                transition: color 200ms ease-out
+                &:hover
+                    color: lighten(black, 20%)
+                &:active
+                    font-size: 1.25rem
+
+.display-block
+    display: block !important
+
+.display-grid
+    display: grid !important
+
+.rotate
+    transform: rotate(0deg) !important
+
+.right
+    right: 0
+
+.active
+    height: initial !important
+    padding: 1rem
+
+.background
+    height: 100vh
+    width: 100%
+    background: url("../Images/background.jpg") no-repeat
+    background-size: cover
+    background-position: center
+
+h2
+    text-align: center
+    font-size: 2rem
+    margin: 3rem 0
+
+.question-answer__container
+    margin: .5rem 0
+    .question
+        padding: 1rem
+        margin: .2rem 0
+        font-size: 1.5rem
+        font-weight: 600
+        cursor: pointer
+        transition: color 300ms ease-out
+        background: $color1
+        &:hover
+            color: $headings
+    .answer
+        margin-top: .1rem
+        // padding: 1rem
+        font-weight: 500
+        background: $color1
+        height: 0
+        overflow: hidden
+        cursor: default
+#section-0
+    margin: 0 1rem
+    .exemple-termo
+        p
+            font-size: 1.5rem
+            text-decoration: underline
+        li
+                font-size: 1.25rem
+    .T-C-M
+        font-size: 1.6rem
+        color: red
+        span
+            font-size: 1.3rem
+            color: #000
+            margin-left: .2rem
+    .macroscopic
+        display: flex
+        justify-content: space-evenly
+        .macroscopic-container
+            width: 40%
+            max-width: 400px
+            min-width: 200px
+            padding: 1rem
+            text-align: center
+            border-radius: 1rem
+            border-bottom: .5rem $background solid
+            transition: transform 250ms linear
+            cursor: default
+            &:hover
+                transform: translateY(-30px)
+            h3
+                font-size: 1.75rem
+                color: darken(orange, 20%)
+            p
+                font-size: 1.1rem
+                font-weight: 500
+    .exemplu-piston
+        display: flex
+        margin: auto
+        justify-content: space-evenly
+        margin: 4rem 0
+        padding: 2rem 0
+        border-radius: 1rem
+        border: .5rem $background solid
+        border-left: none
+        border-right: none
+        .exemplu-piston__texts
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            width: 50%
+            max-width: 600px
+            h3
+                font-size: 1.75rem
+                color: darken(brown, 20%)
+                span
+                    font-size: 1.25rem
+                    margin-left: 1rem
+                    color: black
+        .exemplu-piston__image-container
+            width: 375px
+            img
+                width: 100%
+    .cards-reveal
+        display: flex
+        justify-content: space-around
+        margin-top: 18.75rem
+        .cards-container
+            position: relative
+            width: 300px
+            height: 200px
+            background: $color1
+            border: 2px solid $color2
+            border-radius: 1rem
+            &:hover .cards-container__upper
+                transform: translateY(-200px)
+            .cards-container__upper
+                transition: 450ms transform ease-out
+                position: absolute
+                border-radius: 1rem
+                top: 0
+                right: 0
+                width: 100%
+                height: 100%
+                background: $color2
+                z-index: 100
+                display: flex
+                flex-direction: column
+                justify-content: center
+                text-align: center
+                p
+                    font-size: 1.5rem
+                    font-weight: 500
+                    color: $white
+            .cards-container__lower
+                position: absolute
+                top: 0
+                right: 0
+                width: 100%
+                height: 100%
+                padding: 1rem
+                display: flex
+                flex-direction: column
+                justify-content: center
+                text-align: center
+                p
+                    font-size: 1.25rem
+                    font-weight: 500
+
+#section-1
+    margin: 0 1rem
+    .exemple-parametrii
+        line-height: 1.5
+        p
+            font-size: 1.5rem
+            text-decoration: underline
+        #Egzemple-parametrii
+            li
+                display: inline-block
+                font-size: 1.15rem
+                font-weight: 500
+                padding: .5rem 1.5rem
+                margin: .5rem
+                border-top-right-radius: 1rem
+                border-bottom-right-radius: 1rem
+                background: lighten($color1, 10%)
+
+    .cards-section__title
+        font-size: 2rem
+        margin: 2rem 0
+    .cards-container
+        display: flex
+        justify-content: space-around
+        margin: 4rem 0
+        .card
+            width: 375px
+            padding: 2.5rem 0
+            border-radius: .5rem
+            font-size: 1.45rem
+            text-align: center
+            background: $background-2
+            box-shadow: 13px 19px 35px -2px rgba(0,0,0,0.5)
+            transition: transform 350ms ease
+            cursor: default
+            &:hover
+                transform: scale(1.05)
+
+            &:hover .card-title::after
+                transform: scale(1)
+            .card-title
+                font-size: 1.5rem
+                text-align: left
+                padding-left: $padding
+                width: max-content
+                position: relative
+                &::after
+                    content: ''
+                    position: absolute
+                    left: 0
+                    bottom: -4px
+                    height: .25rem
+                    width: 100%
+                    background: #24744cfd
+                    transform: scale(0)
+                    transition: transform 350ms ease-out
+                    transform-origin: left
+            ul
+                list-style: none
+                padding: 1rem 5rem
+                line-height: 1.4
+                display: inline-flex
+                flex-direction: column
+                align-items: center
+                background: #c2e4d3fd
+                border-radius: 1rem
+    
+#section-2
+    margin: 0 1rem
+    h3
+        font-size: 1.6rem
+        color: red
+        span
+            font-size: 1.3rem
+            color: #000
+            margin-left: .2rem
+    .grafic-container
+        margin: 4rem 0
+        display: flex
+        justify-content: space-evenly
+        .text-container
+            display: flex
+            flex-direction: column
+            align-items: center
+            p
+                width: 35ch
+                font-size: 1.35rem
+                font-weight: 500
+                span
+                    font-size: 1.5rem
+                    font-weight: 600
+                    color: red
+                    text-transform: uppercase
+
+#section-3
+    margin: 0 1rem
+    h3
+        font-size: 1.6rem
+        color: red
+        span
+            font-size: 1.3rem
+            color: #000
+            margin-left: .2rem
+
+    .lateral-cards__container
+        margin: 4rem 0
+        .lateral-card
+            width: 600px
+            padding: 1rem
+            margin: 1rem 0
+            background: $color2
+            border-top-right-radius: 1rem
+            border-bottom-right-radius: 1rem
+            cursor: default
+            transition: transform 250ms linear
+            &:hover
+                transform: translateX(2rem)
+            h4
+                font-size: 1.5rem
+                color: $headings
+                text-decoration: underline
+            p
+                font-size: 1.25rem
+                font-weight: 500
+                color: white
+                .obs
+                    margin: 0 .4rem
+                    text-decoration: underline
+                    color: black
+                .obs-text
+                    color: lighten(black,  10%)
+
+        .lateral-card:nth-of-type(even)
+            margin-left: auto
+            text-align: right
+            background: $color1
+            border-radius: 1rem
+            border-top-right-radius: 0
+            border-bottom-right-radius: 0
+            &:hover
+                transform: translateX(-2rem)
+            p
+                color: darken(white, 90%)
+    h4
+        font-size: 2rem
+        text-decoration: underline
+
+    .observatii-container
+        list-style: none
+        line-height: 1.5
+        font-size: 1.4rem
+        .observatie
+            &::after
+                content: '!'
+                font-size: 1.3rem
+                font-weight: 600
+                margin-left: .5rem
+
+            &::before
+                content: '!'
+                font-size: 1.3rem
+                font-weight: 600
+                margin-right: .5rem
+    .transformari-container
+        display: flex
+        justify-content: space-around
+        margin: 2rem 0
+        .container
+            h5
+                // text-align: center
+                font-size: 1.75rem
+                color: red
+        .container-ciclica
+            h5
+                position: relative
+                &::after
+                    content: '1 -> a -> 2 -> b -> 1'
+                    position: absolute
+                    left: 0
+                    bottom: -1.75rem
+#section-4
+    margin: 0 1rem
+    h3
+        font-size: 2rem
+        text-decoration: underline
+    .interactiuni-container
+        display: flex
+        justify-content: space-evenly
+        margin: 4rem 0
+        .interactiune
+            width: 300px
+            height: 300px
+            border-radius: 50%
+            background: $color2
+            display: flex
+            flex-direction: column
+            justify-content: center
+            text-align: center
+            transition: transform 250ms linear
+            cursor: default
+            &:hover
+                transform: translateY(-1.5rem)
+                h4
+                    color: black
+                p
+                    color: white
+            h4
+                font-size: 1.5rem
+                text-transform: uppercase
+                text-decoration: underline
+                padding: 0 .5rem
+                color: $white
+                transition: color 250ms linear
+            p
+                padding: 0 .5rem
+                font-size: 1.25rem
+                font-weight: 500
+                transition: color 250ms linear
+    .observatii-container
+        list-style: none
+        line-height: 1.5
+        font-size: 1.4rem
+        .observatie
+            &::after
+                content: '!'
+                font-size: 1.3rem
+                font-weight: 600
+                margin-left: .5rem
+
+            &::before
+                content: '!'
+                font-size: 1.3rem
+                font-weight: 600
+                margin-right: .5rem
+    h4
+
+#SECRET
+    .game-container
+        position: relative
+        width: 100%
+        height: 100vw
+        background: black
+        color: white
+        padding: 2rem
+        .game-section__top
+            display: flex
+            justify-content: space-between
+            padding-bottom: .5rem
+            max-height: 92px
+            .info-button
+                // s
+                display: inline-flex
+                width: 40px
+                height: 40px
+                border-radius: 50%
+                cursor: pointer
+                transition: background 300ms linear
+                &:hover
+                    background: lighten(black, 15%)
+                .info-button__content
+                    margin: auto
+                    font-size: 1.5rem
+                    font-weight: 600
+            .info-text
+                display: none
+                position: absolute
+                background: white
+                color: black
+                // font-size: 1.25rem
+                margin-top: .25rem
+                padding: .5rem
+                width: 50ch
+                border-radius: 1rem
+                z-index: 10
+            .currency
+                text-align: center
+                font-size: 1.5rem
+                line-height: .75
+
+        .game-section__middle
+            display: flex
+            justify-content: center
+            padding: .5rem 0
+            img
+                cursor: pointer
+                user-select: none
+            
+        .game-section__bottom
+            display: flex
+            justify-content: space-between
+            padding-top: .5rem
+            .last-upgrade
+                padding: .4rem .7rem
+                background: lighten(black, 15%)
+                border-radius: 1rem
+                cursor: pointer
+                user-select: none
+            .upgrades
+                display: flex
+                .bunici
+                    padding: .4rem .7rem
+                    background: lighten(black, 15%)
+                    border-radius: 1rem
+                    cursor: pointer
+                    user-select: none
+                .upgrade
+                    margin: 0 5rem
+                    padding: .4rem .7rem
+                    background: lighten(black, 15%)
+                    border-radius: 1rem
+                    cursor: pointer
+                    user-select: none
+
+.finish-card
+    position: absolute
+    display: none
+    place-items: center
+    transform: translate(-50%, -50%)
+    top: 25%
+    left: 50%
+    background: $background
+    color: black
+    width: 400px
+    height: 500px
+    border-radius: 1rem
+    user-select: none
+    z-index: 1000
+    h3
+        display: block
+        text-align: center
+        font-size: 2.5rem
+        span
+            display: block
+            color: red
+    .buttons
+        width: 100%
+        display: flex
+        justify-content: space-around
+        .button
+            padding: 1rem 1.5rem
+            border-radius: .5rem
+            border: 1px solid black
+            box-shadow: 5px 11px 35px -8px rgba(0,0,0,0.9)
+            font-weight: 600
+            cursor: pointer
+        .reset-button
+            background: $color2
+        .continue-button
+            background: $color1
+
+.pret
+    // font-weight: bolder
+    font-size: 1.5rem
+
+.counter
+    color: yellow
+    font-weight: 500
+    font-size: 1.25rem
+
+.zacPC
+    color: yellow    
+
+footer
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    padding: 1rem 0
+    background: lighten($headings, 30%)
+    p
+        font-size: 1.25rem
+        cursor: default
+        a
+            font-size: 1.5rem
+            font-weight: 600
+            text-decoration: none
+            color: red
+            transition: color 300ms linear
+            &:hover
+                color: darken(red, 40%)
+    ul
+        list-style: none
+        font-size: 1.15rem
+        li:first-of-type
+            font-size: 1.35rem
+            text-align: left
+            text-decoration: underline
+        li
+            text-align: center
+            a
+                text-decoration: none
+                font-weight: 500
+
+@media (max-width: 1000px) 
+    main
+        #section-0
+            .exemple-termo
+                text-align: center
+                li
+                    list-style: none
+                    &::before 
+                        content: '*'
+                        margin-right: .5rem
+            .macroscopic
+                flex-direction: column
+                align-items: center
+                .macroscopic-container
+                    margin: 1rem 0
+            .cards-reveal
+                flex-direction: column
+                align-items: center
+                margin-top: 3rem
+                .cards-container
+                    margin: 1rem 0
+                    &:hover .cards-container__upper
+                        transform: translateY(0) translateX(300px)
+        #section-1
+            .exemple-parametrii
+                p
+                    text-align: center
+            .cards-section__title
+                text-align: center
+            .cards-container
+                flex-direction: column
+                align-items: center
+                .card
+                    margin: 1.5rem 0
+        #section-3
+            h4
+                text-align: center
+            ul
+                li
+                    text-align: center
+            .lateral-cards__container
+                display: flex
+                flex-direction: column
+                align-items: center
+                .lateral-card
+                    margin: 1.5rem 0
+                    border-radius: 1rem
+                    h4
+                        text-align: center
+                    &:hover
+                        transform: scale(1.05)
+                .lateral-card:nth-of-type(even)
+                    margin-left: 0
+                    border-radius: 1rem
+                    text-align: left
+                    &:hover
+                        transform: scale(1.05)
+            .transformari-container
+                flex-direction: column
+                align-items: center
+        #section-4
+            h3
+                text-align: center
+            .interactiuni-container
+                flex-direction: column
+                align-items: center
+                .interactiune
+                    margin: 1rem 0
+            h4
+                font-size: 2rem
+                text-decoration: underline
+                text-align: center
+            ul
+                li
+                    text-align: center
+
+@media (max-width: 950px)
+    main
+        #section-0
+            .exemplu-piston
+                flex-direction: column
+                align-items: center
+                border: none
+        #section-2
+            .grafic-container
+                flex-direction: column-reverse
+                align-items: center
+                .image-container
+                    margin-top: 1.5rem
+
+@media (max-width: 850px)
+    main
+        #section-0
+            .cards-reveal
+                .cards-container
+                    &:hover .cards-container__upper
+                        transform: translateY(0) translateX(300px)
+                        opacity: .1
+                    .cards-container__upper
+                        transition: transform 450ms ease-out opacity 450ms ease-out
+        #SECRET
+            .game-container
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                height: 1000px
+                .game-section__top
+                    flex-direction: column
+                    .info-text
+                        width: 30ch
+                .game-section__bottom
+                    flex-direction: column
+                    .last-upgrade
+                        text-align: center
+                    .upgrades
+                        margin-top: 1rem
+                        justify-content: space-evenly
+                        .bunici
+                            min-width: 30%
+                        .upgrade
+                            min-width: 30%
+
+@media (max-width: 700px)
+    main
+        #section-0
+            margin: 0 2rem
+        #section-1
+            margin: 0 2rem
+            .cards-container
+                .card
+                    width: 332px
+        #section-2
+            margin: 0 2rem
+            .grafic-container
+                .text-container 
+                    p
+                        width: auto
+        #section-3
+            .lateral-cards__container
+                .lateral-card
+                    width: auto
+            .transformari-container
+                .container
+                    h5
+                        text-align: center
+                .container-ciclica
+                    h5
+                        &::after
+                            position: absolute
+                            left: 5rem
+                            bottom: -1.75rem
+            margin: 0 2rem
+    footer
+        flex-direction: column
+
+// @media (max-width: 500px)
+//         nav
+//             ol
+//                 position: relative
+//                 right: calc(100% + 2rem)
+//                 top: 0
+//                 width: 100vw !important
+//                 height: 100vh

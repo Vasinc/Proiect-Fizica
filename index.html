@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Vasinc - Proiect fizica</title>
+        <link rel="stylesheet" href="./Styles/style.css">
+    </head>
+    <body>
+        <!-- https://fizicaliceu.com/wp-content/uploads/2018/04/Termodinamica_Notiuni_fundamentale.pdf -->
+        <div class="backdrop"></div>
+        <a href="#top" class = "up">
+            <div class="up-content">
+                >
+            </div>
+        </a>
+        <nav>
+            <h1 id="top">Noțiuni termodinamice de bază</h1>
+            <i class="fa fa-arrow-down"></i>
+            <ol class="legend">
+                <li>
+                    <a href="#section-0">
+                        Sistem termodinamic. Clasificări
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-1">
+                        Parametri de stare
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-2">
+                        Echilibrul termodinamic
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-3">
+                        Procese (transformări) termodinamice.
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-4">
+                        Interacțiunea sistemelor termodinamice cu mediul exterior
+                    </a>
+                </li>
+                <li>
+                    <a href="#SECRET">
+                        SECRET
+                    </a>
+                </li>
+            </ol>
+        </nav>
+        <main>
+            <div class="background"></div>
+            <div id="section-0">
+                <h2>1. Fenomen termic. Termodinamica</h2>
+                <div class="question-answer__container">
+                    <p class="question question-1">
+                        Ce sunt fenomenele termice?
+                    </p>
+                    <p class="answer answer-1">
+                        Fenomenele fizice legate de mișcarea completă dezordornată care se manifestă la
+                        nivel molecular.
+                    </p>
+                </div>
+                <div class="exemple-termo">
+                    <p>Unele exemple de fenomene termice</p>
+                    <ul id="Egzemple-termo">
+                        <li>Schimbul de căldură dintre corpuri</li>
+                        <li>Variația proprietăților fizice (𝑝, 𝑉) la modificarea temperaturii</li>
+                        <li>Trecerea dintr-o stare de agregare în alta</li>
+                    </ul>
+                </div>
+                <div class="question-answer__container">
+                    <p class="question question-2">
+                        Ce este termodinamica?
+                    </p>
+                    <p class="answer answer-2">
+                        Studiază fenomenele termice fără să a lua în considerare structura internă, atomo-moleculară a
+                        corpurilor. Termodinamica studiază experimental fenomenele în care intervin corpuri macroscopice (corpuri
+                        formate dintr-un număr foarte mare dar finit de molecule sau atomi).
+                    </p>
+                </div>
+                <h3 class="T-C-M">Teoria cinetico-moleculară (T.C.M.):<span>studiază fenomenele termice pornind de la structura internă a corpurilor.
+                    Orice corp e format din atomi sau molecule, iar mișcările acestora se supun legilor mecanicii clasice.</span></h3>
+                <h2>Sistem termodinamic. Clasificări</h2>
+                <div class="macroscopic">
+                    <div class="macroscopic-container">
+                        <h3>Corp macroscopic</h3>
+                        <p>Corp format dintr-un număr foarte mare dar finit de molecule sau atomi</p>
+                    </div>
+                    <div class="macroscopic-container">
+                        <h3>Sistem termodinamic</h3>
+                        <p>Orice corp macroscopic sau ansamblu bine precizat de corpuri macroscopice.</p>
+                    </div>
+                </div>
+                <div class="exemplu-piston">
+                    <div class="exemplu-piston__texts">
+                        <h3>Exemplu:<span>gaz închis într-un cilindru cu piston mobil
+                        </span></h3>
+                        <h3>Observație:<span>Corpurile înconjurătoare care nu fac
+                            parte din sistemul termodinamic se numesc corpuri
+                            exterioare (mediul exterior).</span></h3>
+                    </div>
+                    <div class="exemplu-piston__image-container">
+                        <img src="./Images/piston.jpg" alt="Cilindru cu aer presat de piston">
+                    </div>
+                </div>
+                <!--  WHEN YOU HOVER OVER, 
+                    THE WHOLE ENTIRE CARD GOWS UP AND THE DEFITION REVEALS  -->
+                <h2>Sisteme termodinamice</h2>
+                <div class="cards-reveal">
+                    <div class="cards-container">
+                        <div class="cards-container__upper">
+                            <p>Sistem termodinamic deschis</p>
+                        </div>
+                        <div class="cards-container__lower">
+                            <p>Schimbă energie și substanță cu mediul exterior</p>
+                        </div>
+                    </div>
+                    <div class="cards-container">
+                        <div class="cards-container__upper">
+                            <p>Sistem termodinamic închis</p>
+                        </div>
+                        <div class="cards-container__lower">
+                            <p>Schimbă energie cu mediul exterior, dar nu schimbă substanță
+                                cu mediul exterior</p>
+                        </div>
+                    </div>
+                    <div class="cards-container">
+                        <div class="cards-container__upper">
+                            <p>Sistem izolat(ideal)</p>
+                        </div>
+                        <div class="cards-container__lower">
+                            <p>Sistem termodinamic care nu interacționează și nu schimbă substanță cu
+                                mediul exterior</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section-1">
+                <h2>2. Parametrii de stare </h2>
+                <div class="question-answer__container">
+                    <p class="question question-3">
+                        Ce sunt parametrii de stare?
+                    </p>
+                    <p class="answer answer-3">
+                        Mărimi fizice care caracterizează proprietățile
+                        sistemului termodinamic.
+                    </p>
+                </div>
+                <div class="exemple-parametrii">
+                    <p>Exemple de parametrii de stare</p>
+                    <ul id="Egzemple-parametrii">
+                        <li>Masa, m</li>
+                        <li>Cantitatea de substanță, ν</li>
+                        <li>Volumul, V</li>
+                        <li>Presiunea, p</li>
+                        <li>Temperatura, T</li>
+                        <li>Densitatea, ρ</li>
+                    </ul>
+                </div>
+                <h3 class = "cards-section__title"> Clasificari</h3>
+                <div class="cards-container">
+                    <div class="card card-1">
+                        <h4 class="card-title">Parametrii intensivi</h4>
+                        <p class="card-mesurements">p, T, ρ</p>
+                        <p class="card-exemple"> (𝑥1 = 𝑥2 = 𝑥)</p>
+                        <ul>
+                            <li>p = p<sub>1</sub> = p<sub>2</sub></li>
+                            <li>T = T<sub>1</sub> = T<sub>2</sub></li>
+                            <li>ρ = ρ<sub>1</sub> = ρ<sub>2</sub></li>
+                        </ul>
+                    </div>
+                    <div class="card card-2">
+                        <h4 class="card-title">Parametrii extensivi / aditivi</h4>
+                        <p class="card-mesurements">m, ν, V</p>
+                        <p class="card-exemple">(𝑥 = 𝑥<sub>1</sub> + 𝑥 <sub>2</sub>)</p>
+                        <ul>
+                            <li>m = m<sub>1</sub> + m<sub>2</sub></li>
+                            <li>ν = ν<sub>1</sub> + ν<sub>2</sub></li>
+                            <li>V = V<sub>1</sub> + V<sub>2</sub></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="section-2">
+                <h2>3. Echilibrul termic</h2>
+                <h3>Starea de echilibru termodinamic:<span>starea unui sistem termodinamic în care parametrii de stare au
+                    valori care nu variază în timp.</span></h3>
+                <h3>Starea de neechilibru termodinamic:<span> starea unui sistem termodinamic în care parametrii de stare au
+                    valori care variază în timp</span></h3>
+                <div class="grafic-container">
+                    <div class="image-container"><img src="./Images/grafic-stare-de-echilibru.jpg" alt="Starea de echilibru reprezentata grafic printr-un punct in coordonate p - V"></div>
+                    <div class="text-container">
+                        <p>Starea de echilibru termodinamic se reprezintă grafic
+                            printr-un punct în coordonate p – V , numite <span>coordonate Clapeyron.</span>
+                    </div>
+                </div>
+            </div>
+            <div id="section-3">
+                <h2>4. Procese (transformări) termodinamice</h2>
+                <h3>Proces termodinamic (transformare de stare):<span>trecerea unui sistem termodinamic dintr-o stare de
+                    echilibru termodinamic în altă stare de echilibru termodinamic.</span></h3>
+                <div class="lateral-cards__container">
+                    <div class="lateral-card">
+                        <h4>Transformarea cvasistatică</h4>
+                        <p>Transformarea în care parametrii de stare variază în timp atât de lent, încât,
+                            în orice moment, sistemul să poată fi considerat în echilibru termodinamic<span class="obs">Obs:</span><span class = "obs-text">Transformările cvasistatice se
+                            reprezintă prin curbe în coordonate p – V</span></p>
+                    </div>
+                    <div class="lateral-card">
+                        <h4>Transformarea necvasistatică</h4>
+                        <p>Transformarea în care sistemul termodinamic trece dintr-o stare inițială de
+                            echilibru într-o stare finală de echilibru fără să treacă succesiv prin stări intermediare de echilibru
+                            termodinamic.</p>
+                    </div>
+                    <div class="lateral-card">
+                        <h4>Transformarea reversibilă</h4>
+                        <p>Transformarea care poate avea loc în ambele sensuri, sistemul termodinamic
+                            trecând prin aceleași stări intermediare de echilibru termodinamic.
+                            </p>
+                    </div>
+                    <div class="lateral-card">
+                        <h4>Transformarea ciclică</h4>
+                        <p>Transformarea în care starea finală a sistemului termodinamic coincide cu starea
+                            inițială.</p>
+                    </div>
+                </div>
+                <h4>Observații:</h4>
+                <ul class = "observatii-container">
+                    <li class="observatie">Procesele necvasistatice sunt ireversibile</li>
+                    <li class="observatie">Procesele din natură sunt ireversibile</li>
+                    <li class="observatie">Procesele cvasistatice se reprezintă prin curbe în coordonate p – V:</li>
+                </ul>
+                <div class="transformari-container">
+                    <div class="container container-reversabila">
+                        <h5>Transformare reversibilă</h5>
+                        <img src="./Images/transformare-reversabila.jpg" alt="Grafic transformare reversabila">
+                    </div>
+                    <div class="container container-ciclica">
+                        <h5>Transformare ciclică</h5>
+                        <img src="./Images/transformare-ciclica.jpg" alt="Grafic transformare ciclica">
+                    </div>
+                </div>
+            </div>
+            <div id="section-4">
+                <h2>5. Interacțiunea sistemelor termodinamice cu mediul exterior</h2>
+                <h3>Tipuri de Interacțiuni</h3>
+                <div class="interactiuni-container">
+                    <div class="interactiune">
+                        <h4>prin contact mecanic</h4>
+                        <p>schimb de lucru mecanic (L)</p>
+                    </div>
+                    <div class="interactiune">
+                        <h4>prin contact termic</h4>
+                        <p>schimb de căldură (Q)</p>
+                    </div>
+                    <div class="interactiune">
+                        <h4>prin schimb de substanță</h4>
+                        <p>sisteme deschise</p>
+                    </div>
+                </div>
+                <h4>Observații:</h4>
+                <ul class = "observatii-container">
+                    <li class="observatie">Sistemele izolate mecanic își mențin volumul constant (V = cst.)</li>
+                    <li class="observatie">Sistemele izolate adiabatic (izolate termic) nu schimbă căldură cu mediul exterior (Q = 0)</li>
+                </ul>
+            </div>
+            <div id="SECRET">
+                <h2>SECRET GAME</h2>
+                <div class="game-container">
+                    <div class="finish-card">
+                        <h3>Ai terminat jocul!<span>BRAVO!!!</span></h3>
+                        <div class="buttons">
+                            <div class="reset-button button event-button">RESETEAZA</div>
+                            <div class="continue-button button event-button">CONTINUA</div>
+                        </div>
+                    </div>
+                    <div class="game-section__top">
+                        <div class="info-section">
+                            <div class="info-button">
+                                <div class="info-button__content">
+                                    i
+                                </div>
+                            </div>
+                            <div class="info-text">
+                                <p>Pentru a face zacuște, apasă pe imaginea cu zacuscă. Pentru a face mai multe zacuște, apasă pe upgrade. Pentru a face zacuscă automat, cumpără bunici. Pentru a termina jocul, cumpără "Last upgrade".</p>
+                            </div>
+                        </div>
+                        <div class="currency">
+                            <p>Număr de zacuște:</p><span class="currency-number pret"></span>
+                            <p>Faci <span class="zacPC"></span> zacuste per click</p>
+                        </div>
+                    </div>
+                    <div class="game-section__middle">
+                        <img src="./Images/zacusca.png" alt="Zacusca" class="zacusca event-button">
+                    </div>
+                    <div class="game-section__bottom">
+                        <div class="last-upgrade event-button"> Last upgrade <p>Pret: 100 bunici<span class="pret-last pret"></span></p></div>
+                        <div class="upgrades">
+                            <div class="bunici event-button"> Cumpara o bunică(<span class="bunici-counter counter"></span>) <p>Pret: <span class="pret-bunica pret"></span></p></div>
+                            <div class="upgrade event-button"> Cumpara upgrade-uri(<span class="upgrade-counter counter"></span>) <p>Pret: <span class="pret-upgrade pret"></span></p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 
+                3. FOOTERUL
+             -->
+        </main>
+        <footer>
+            <p>Proiect facut de <a href="https://www.instagram.com/_dani.zew_/" target="_blank" rel="noopener">Dani</a></p>
+            <ul>
+                <li>Surse de inspiratie:</li>
+                <li><a href="https://fizicaliceu.com/wp-content/uploads/2018/04/Termodinamica_Notiuni_fundamentale.pdf" target="_blank" rel="noopener">Linkul acesta</a></li>
+                <li> Creierul propriu </li>
+            </ul>
+        </footer>
+    <script src="./Javascript/script.js" defer></script>
+    </body>
+</html>
