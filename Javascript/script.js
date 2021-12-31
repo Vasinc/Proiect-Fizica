@@ -139,9 +139,9 @@ buniciBtn.addEventListener("click", () => {
 })
 
 setInterval(() => {
-    currencyN = currencyN + 50 * buniciCounterN;
+    currencyN = currencyN + 25 * buniciCounterN;
     currency.textContent = Math.trunc(currencyN);
-}, 500);
+}, 1000);
 
 lastUpgradeBtn.addEventListener("click", () => {
     if(buniciCounterN >= 100) {
